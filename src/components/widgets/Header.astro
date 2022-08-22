@@ -1,6 +1,7 @@
 ---
 import { IconSun, IconGithub, IconMenu, IconRSS } from "~/components/icons";
 import Logo from "~/components/widgets/Logo.astro";
+import Picture from "../core/Picture.astro";
 const {} = Astro.props;
 ---
 
@@ -12,17 +13,23 @@ const {} = Astro.props;
   >
     <div class="flex justify-between">
       <a class="flex items-center" href="/">
-        <Logo />
+        <!-- <Logo /> -->
+        <Picture
+          src={import("~/assets/images/sgi-logo.png")}
+          widths={[64]}
+          alt="Hero Image"
+          aspectRatio="16:9"
+        />
       </a>
       <div class="flex items-center md:hidden">
-        <button
+        <!-- <button
           type="button"
           class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
           aria-label="Toggle between Dark and Light mode"
           data-aw-toggle-color-scheme
         >
           <IconSun class="w-6 h-6" />
-        </button>
+        </button> -->
         <button
           class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition"
           aria-label="Toggle Menu"
@@ -33,7 +40,7 @@ const {} = Astro.props;
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200"
+      class="items-center w-full md:w-auto hidden md:flex text-gray-800 dark:text-slate-200"
       aria-label="Main navigation"
       id="menu"
     >
@@ -42,38 +49,66 @@ const {} = Astro.props;
       >
         <li>
           <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href="#"
-            >Pages
+            >NIPT
           </a>
         </li>
         <li>
           <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href="#"
-            >Resources
+            >PFI
           </a>
         </li>
         <li>
           <a
-            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href="/blog"
-            >Blog
+            >NGS
           </a>
         </li>
-        <li class="md:hidden">
+        <li>
+          <a
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            href="/blog"
+            >QPCR
+          </a>
+        </li>
+        <li>
+          <a
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            href="/blog"
+            >Wet Lab
+          </a>
+        </li>
+        <li>
+          <a
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            href="/blog"
+            >Dry Lab
+          </a>
+        </li>
+        <li>
+          <a
+            class="font-medium hover:text-red-700 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            href="/blog"
+            >About
+          </a>
+        </li>
+        <!-- <li class="md:hidden">
           <a
             class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href="https://github.com/onwidget/astrowind"
           >
             Github
           </a>
-        </li>
+        </li> -->
       </ul>
       <div
         class="md:self-center flex items-center mb-4 md:mb-0 collapse collapsed"
       >
-        <div class="hidden items-center mr-3 md:flex">
+        <!-- <div class="hidden items-center mr-3 md:flex">
           <button
             type="button"
             class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
@@ -96,18 +131,8 @@ const {} = Astro.props;
           >
             <IconGithub />
           </a>
-        </div>
+        </div> -->
       </div>
     </nav>
   </div>
 </header>
-
-<style is:global>
-  [data-aw-toggle-menu].expanded .line1 {
-    transform: rotate(-45deg) translate(-12px, 8px);
-  }
-
-  [data-aw-toggle-menu].expanded .line2 {
-    transform: rotate(45deg) translate(4px, -16px);
-  }
-</style>

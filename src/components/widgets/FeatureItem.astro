@@ -1,0 +1,43 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="flex flex-row max-w-md">
+  <div class="mb-4 mr-4">
+    <div
+      class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500"
+    >
+      <svg
+        class="w-12 h-12 p-0.5"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <rect
+            class="fill-current text-blue-600"
+            width="64"
+            height="64"
+            rx="32"></rect>
+          <g stroke-linecap="square" stroke-width="2">
+            <path
+              class="stroke-current text-white"
+              d="M20.571 20.571h13.714v17.143H20.571z"
+            >
+            </path>
+            <path
+              class="stroke-current text-blue-300"
+              d="M38.858 26.993l6.397 1.73-4.473 16.549-13.24-3.58"
+            >
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div>
+    <h3 class="mb-3 text-xl font-bold">{title}</h3>
+    <div>
+      <slot />
+    </div>
+  </div>
+</div>
